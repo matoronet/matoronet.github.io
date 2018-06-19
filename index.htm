@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>マトロ | MATORO.NET</title>
+
+  <style>
+/* normalize.css begin */
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{margin:0}h1{font-size:2em;margin:.67em 0}
+svg:not(:root){overflow:hidden}
+/* normalize.css end */
+body {
+  background-color: #FAFAF0;
+  color: #303030;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+.content {
+  width: 100%;
+  text-align: center;
+  padding-top: 10%;
+}
+.logo {
+  margin: 0 auto;
+}
+.content h1 {
+  text-transform: uppercase;
+}
+  </style>
+  <script>
+function loadColor(elementTag, colorFill){
+  elementTag.contentDocument.getElementsByTagName("g")[0].setAttribute("fill", colorFill);
+}
+  </script>
+</head>
+<body>
+  <div class="content">
+    <object class="logo" type="image/svg+xml" data="MATORO.svg" width="256" onload="loadColor(this, '#303030')">
+      Your browser does not support SVG.
+    </object>
+    <h1>
+      いらっしゃい
+    </h1>
+  </div>
+</body>
+</html>
