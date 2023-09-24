@@ -11,46 +11,53 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <title>マトロ | MATORO.NET</title>
 
   <style>
-/* normalize.css begin */
-html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
-body{margin:0}
-h1{font-size:2rem;margin:.67rem 0}
-svg:not(:root){overflow:hidden}
-/* normalize.css end */
+/* normalize begin */
+html{-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;}
+body{margin:0;padding:0;width:100%;min-height:100%;line-height:1.15;font-size:1rem;font-weight:normal;}
+h1{font-size:2rem;line-height:1.5;font-weight:700;margin:.67rem 0}
+/* normalize end */
 body {
-  background-color: #FBFBFD;
+  background-color: #fafafc;
   color: #303030;
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 400;
-  width: 100%;
+}
+main {
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .content {
   text-align: center;
-  margin-top: 10%;
+  margin-top: -5%;
 }
   </style>
   <script>
 function loadColor(elementTag, colorFill){
-  elementTag.contentDocument.getElementsByTagName("g")[0].setAttribute("fill", colorFill);
+  elementTag.contentDocument.querySelectorAll('g').forEach((element) => {
+    element.setAttribute("fill", colorFill);
+  });
 }
   </script>
 </head>
 <body>
-  <div class="content">
-    <object class="logo" type="image/svg+xml" data="images/MATORO.svg" width="256" onload="loadColor(this, '#303030')">
-      Your browser does not support SVG.
-    </object>
-    <h1>
-      いらっしゃい
-    </h1>
+  <div id="app">
+    <main>
+      <div class="content">
+        <object class="logo" type="image/svg+xml" data="/images/MATORO.svg" width="256" onload="loadColor(this, '#303030')">
+          Your browser does not support SVG.
+        </object>
+        <h1>
+          いらっしゃい
+        </h1>
+      </div>
+    </main>
   </div>
 </body>
 </html>
