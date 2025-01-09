@@ -9,55 +9,64 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
 
+  <title>マトロ | MATORO.NET</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <title>マトロ | MATORO.NET</title>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net"/>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/leonardwoo/pikacss@dev/dist/pikacss-normalize.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@iconfu/svg-inject@1.2.3/dist/svg-inject.min.js"></script>
 
-  <style>
-/* normalize begin */
-html{-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;}
-body{margin:0;padding:0;width:100%;min-height:100%;line-height:1.15;font-size:1rem;font-weight:normal;}
-h1{font-size:2rem;line-height:1.5;font-weight:700;margin:.67rem 0}
-/* normalize end */
-body {
-  background-color: #fafafc;
-  color: #303030;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 400;
-}
-main {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.content {
-  text-align: center;
-  margin-top: -5%;
-}
-  </style>
-  <script>
-function loadColor(elementTag, colorFill){
-  elementTag.contentDocument.querySelectorAll('g').forEach((element) => {
-    element.setAttribute("fill", colorFill);
-  });
-}
-  </script>
+  <link rel="proload" href="/stylesheets/style.css" as="style" />
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
 </head>
 <body>
-  <div id="app">
-    <main>
-      <div class="content">
-        <object class="logo" type="image/svg+xml" data="/images/MATORO.svg" width="256" onload="loadColor(this, '#303030')">
-          Your browser does not support SVG.
-        </object>
-        <h1>
-          いらっしゃい
-        </h1>
+  <noscript>
+    <style>
+      .page-shade {
+        background-color: #FFFFFF;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+      }
+
+      .default-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 18px;
+        line-height: 24px;
+        margin: 10%;
+        width: 80%;
+      }
+    </style>
+     <div class="page-shade">
+      <div class="default-text">
+        <p>We've detected that JavaScript is disabled in your browser.You will not be able use this.</p><!-- en -->
+        <p>Hemos detectado que JavaScript está desactivado en su navegador. No podrá utilizarlo.</p><!-- es -->
+        <p>Nous avons détecté que JavaScript est désactivé dans votre navigateur. Vous ne pourrez pas l'utiliser.</p><!-- fr -->
+        <p>お使いのブラウザでJavaScriptが無効になっていることが検出されました。これは使用できません。</p><!-- ja -->
+        <p>我們檢測到您的瀏覽器禁用了JavaScript。您將無法使用它。</p><!-- zh-TW -->
+        <p>귀하의 브라우저에서 JavaScript가 비활성화되어 있음을 감지했습니다.이 기능을 사용할 수 없습니다.</p><!-- ko -->
       </div>
-    </main>
+    </div>
+  </noscript>
+  <div id="app">
+    <div class="min-h-screen container mx-auto flex flex-col justify-center">
+      <main class="flex-grow flex justify-center items-center">
+        <div class="logo-box text-center">
+          <div class="logo mx-auto">
+            <img class="select-none" src="/images/MATORO.svg" onload="SVGInject(this);" />
+          </div>
+          <h1>いらっしゃい</h1>
+          <h3>これはマトロのホームページです</h3>
+        </div>
+      </main>
+    </div>
   </div>
 </body>
 </html>
